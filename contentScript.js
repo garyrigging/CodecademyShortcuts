@@ -12,7 +12,7 @@ function findElementsToClickByInnerHTML(commandString) {	//command string must b
 			if(typeof element.innerHTML === "string"){
 				if(element.innerHTML.toLowerCase().includes(commandString)){
 					element.click();
-					elementIndex = -1;
+					break;
 				}
 			}
 		}
