@@ -1,25 +1,11 @@
 chrome.webNavigation.onCompleted.addListener(function() {
 	chrome.commands.onCommand.addListener(function(command)	{
-		switch (command) {
-			case 'run':
-				getSelectedTab_RunScript("run.js");
-				break;
-			case 'next':
-				getSelectedTab_RunScript("next.js");
-				break;
-			case 'back':
-				getSelectedTab_RunScript("back.js");
-				break;
-			default:
-				console.log("That's a command the Codecamedy Shortcut extension doesn't know");
-		}
+		sendMessageToSelectedTab(command);
 	});
 }, {url: [{urlMatches : 'https://www.codecademy.com/*'}]});
 
-function getSelectedTab_RunScript(scriptFileNameString)	{
+function sendMessageToSelectedTab(commandString)	{
 	chrome.tabs.getSelected(function(selectedTab){
-		chrome.tabs.executeScript( selectedTab.id, { file: scriptFileNameString},function(results){
-			//if the script has results, or a follow up action, they can be fired 
-		});
+		chrome.tabs.sendMessage(selectedTab.id, {'command' : commandString});
 	});
 }

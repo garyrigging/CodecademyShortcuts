@@ -3,7 +3,7 @@
     "description" : "Binds Keyboard Shortcuts to Page Actions @ Codecademy",
     "version": "1.0",
     "manifest_version": 2,
-    "permissions": ["webNavigation","tabs","activeTab"],
+    "permissions": ["webNavigation","tabs"],
     "commands": {
       "run": {
         "suggested_key": {
@@ -24,9 +24,14 @@
         "description": "Selects the Back Btn"
       }
     },
+   "content_scripts": [
+      {
+        "matches": ["https://www.codecademy.com/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
     "background": {
     	"scripts": ["script.js"],
     	"persistent": false
     }
-  
   }
