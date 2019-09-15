@@ -1,0 +1,26 @@
+{
+    "name": "Codecademy Shortcuts",
+    "description" : "Binds Keyboard Shortcuts to Page Actions @ Codecademy",
+    "version": "1.0",
+    "manifest_version": 2,
+    "permissions": ["webNavigation","tabs","activeTab"],
+    "commands": {
+      "run": {
+        "suggested_key": {
+          "default": "Alt+Down"
+        },
+        "description": "Selects the Run Btn"
+      },
+      "next": {
+        "suggested_key": {
+          "default": "Alt+Right"
+        },
+        "description": "Selects the Next Btn"
+      }
+    },
+    "background": {
+    	"scripts": ["script.js"],
+    	"persistent": false
+    }
+  
+  }
