@@ -16,6 +16,12 @@
           "default": "Alt+Right"
         },
         "description": "Selects the Next Btn"
+      },
+      "back": {
+        "suggested_key": {
+          "default": "Alt+Left"
+        },
+        "description": "Selects the Back Btn"
       }
     },
     "background": {

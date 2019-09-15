@@ -7,6 +7,9 @@ chrome.webNavigation.onCompleted.addListener(function() {
 			case 'next':
 				getSelectedTab_RunScript("next.js");
 				break;
+			case 'back':
+				getSelectedTab_RunScript("back.js");
+				break;
 			default:
 				console.log("That's a command the Codecamedy Shortcut extension doesn't know");
 		}
