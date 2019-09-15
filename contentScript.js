@@ -7,7 +7,6 @@ function findElementsToClickByInnerHTML(commandString) {	//command string must b
 		elementIndex = elements.length - 1 ;
 	while(elementIndex >= 0){
 		var element = elements[elementIndex];
-		console.log(element);
 		if(element.innerHTML){
 			if(typeof element.innerHTML === "string"){
 				if(element.innerHTML.toLowerCase().includes(commandString)){
