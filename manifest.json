@@ -7,19 +7,19 @@
     "commands": {
       "run": {
         "suggested_key": {
-          "default": "Alt+Down"
+          "default": "Alt+Shift+Down"
         },
         "description": "Selects the Run Btn"
       },
       "next": {
         "suggested_key": {
-          "default": "Alt+Right"
+          "default": "Alt+Shift+Right"
         },
         "description": "Selects the Next Btn"
       },
       "back": {
         "suggested_key": {
-          "default": "Alt+Left"
+          "default": "Alt+Shift+Left"
         },
         "description": "Selects the Back Btn"
       }
