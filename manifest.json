@@ -3,7 +3,7 @@
     "description" : "Binds Keyboard Shortcuts to Page Actions @ Codecademy",
     "version": "1.0",
     "manifest_version": 2,
-    "permissions": ["webNavigation","tabs"],
+    "permissions": ["webNavigation","tabs","idle"],
     "commands": {
       "run": {
         "suggested_key": {
