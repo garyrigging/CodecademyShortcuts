@@ -8,8 +8,6 @@ chrome.commands.onCommand.addListener(function(command)	{
 		sendMessageToSelectedTab(command);
 	});
 
-chrome.idle.onStateChanged.addListener(function() {
-	chrome.commands.onCommand.addListener(function(command)	{
-		sendMessageToSelectedTab(command);
-	});
+chrome.runtime.onSuspend.addListener(function() {
+	chrome.runtime.reload();
 });
