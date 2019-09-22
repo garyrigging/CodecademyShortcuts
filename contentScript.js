@@ -6,9 +6,14 @@ function findElementsToClickByInnerHTML(commandString) {	//command string must b
 	var elements = document.querySelectorAll('[data-btn="true"]');
 	for (var i = elements.length - 1; i >= 0; i--) {
 		var element = elements[i];
-		if(element.innerHTML){
-			if(typeof element.innerHTML === "string"){
-				if(element.innerHTML.toLowerCase().includes(commandString)){
+		if (element.innerHTML){
+			if (typeof element.innerHTML === "string"){
+				if (commandString === "run"){
+					if (element.innerHTML.toLowerCase().includes(commandString) || element.innerHTML.toLowerCase().includes("save")){
+						element.click();
+						break;
+					}
+				}else if (element.innerHTML.toLowerCase().includes(commandString)){
 					element.click();
 					break;
 					}
