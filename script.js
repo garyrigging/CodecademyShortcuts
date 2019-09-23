@@ -1,9 +1,6 @@
-chrome.webNavigation.onCompleted.addListener(function() { 
-	runCount++;
-	chrome.commands.onCommand.addListener(function(command)	{
+chrome.commands.onCommand.addListener(function(command)	{
 		sendMessageToSelectedTab(command);
-	});
-}, {url: [{urlMatches : 'https://www.codecademy.com/*'}]});
+});
 
 function sendMessageToSelectedTab(commandString)	{
 	chrome.tabs.getSelected(function(selectedTab){
