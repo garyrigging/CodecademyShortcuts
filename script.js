@@ -1,6 +1,4 @@
-var runCount = 0;
 chrome.webNavigation.onCompleted.addListener(function() { 
-	console.log('running ' + runCount);
 	runCount++;
 	chrome.commands.onCommand.addListener(function(command)	{
 		sendMessageToSelectedTab(command);
