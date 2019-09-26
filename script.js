@@ -1,5 +1,6 @@
 chrome.commands.onCommand.addListener(function(command)	{
 		sendMessageToSelectedTab(command);
+		console.log(command);
 });
 
 function sendMessageToSelectedTab(commandString)	{

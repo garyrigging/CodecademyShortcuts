@@ -7,19 +7,22 @@
     "commands": {
       "run": {
         "suggested_key": {
-          "default": "Alt+Shift+Down"
+          "default": "Alt+Shift+Down",
+          "mac" : "MacCtrl+Shift+Down"
         },
         "description": "Selects the Run Btn"
       },
       "next": {
         "suggested_key": {
-          "default": "Alt+Shift+Right"
+          "default": "Alt+Shift+Right",
+          "mac" : "MacCtrl+Shift+Right"
         },
         "description": "Selects the Next Btn"
       },
       "back": {
         "suggested_key": {
-          "default": "Alt+Shift+Left"
+          "default": "Alt+Shift+Left",
+          "mac" : "MacCtrl+Shift+Left"
         },
         "description": "Selects the Back Btn"
       }
